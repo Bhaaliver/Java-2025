@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("you are " + fibinachi(1, 1, 17) + " pounds");
+        System.out.println("you are " + fibinachi(0, 0, 17) + " pounds");
     }
 
     public static int fibinachi(int last, int current, int amountleft){
