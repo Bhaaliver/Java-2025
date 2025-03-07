@@ -26,6 +26,15 @@ public class LinkedList {
             tail = tail.getNextNode();
     }
 
+    public void addNode(Node newNode, Node newParent){
+        Node oldChild = newParent.getNextNode();
+        if (oldChild == null){
+            addNode(newNode);
+        }
+        newNode.setNextNode(oldChild);
+        newParent.setNextNode(newNode);
+    }
+
     public Node getHead() {
         return head;
     }
@@ -35,18 +44,33 @@ public class LinkedList {
     }
 
     public void sortInsertion(){
-        Node sortedHead = null;
-        Node current = head;
+        Node sortedHead = head;
+        head = head.getNextNode();
+        sortedHead.setNextNode(null);
 
-        while (current != null){
+        while(head != null){
+            Node oldHead = head;
+            head = head.getNextNode();
+            
             Node pointerA = sortedHead;
-            Node next = sortedHead.getNextNode();
-            if(pointerA == null || pointerA.getData() <= current.getData()){
-                current.setNextNode(sortedHead);
-                sortedHead = current;
-            }else if (pointerA.getData() > current.getData()){
-                pointerA = pointerA.getNextNode();
+            Node pointerB = pointerA.getNextNode();
+
+            boolean stillInsterting = true;
+            while(stillInsterting){  
+                if(oldHead.getData() < pointerA.getData()){
+                    oldHead.setNextNode(pointerA);
+                    sortedHead = oldHead;
+                    stillInsterting = false;
+                }else if(pointerB == null || oldHead.getData() <= pointerB.getData()){
+                    oldHead.setNextNode(pointerB);
+                    pointerA.setNextNode(oldHead);
+                    stillInsterting = false;
+                }else{
+                    pointerA = pointerA.getNextNode();
+                    pointerB = pointerB.getNextNode();
+                }
             }
         }
+        head = sortedHead;
     }
 }

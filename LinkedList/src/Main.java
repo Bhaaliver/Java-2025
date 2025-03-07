@@ -10,8 +10,13 @@ public class Main {
         secondLinkedList.addNode(firstLinkedList.getHead());
         secondLinkedList.addNode(60);
         secondLinkedList.addNode(70);
+        secondLinkedList.addNode(43);
+        secondLinkedList.addNode(8);
+
+        secondLinkedList.sortInsertion();
 
         Node pointerA = secondLinkedList.getHead();
+        
         while(pointerA != null){
             System.out.println(pointerA.getData());
             pointerA = pointerA.getNextNode();
