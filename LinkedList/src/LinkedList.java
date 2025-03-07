@@ -45,10 +45,12 @@ public class LinkedList {
     }
 
     public void sortInsertion(){
+        // Initialize sortedHead with the first node of the list
         Node sortedHead = head;
         head = head.getNextNode();
         sortedHead.setNextNode(null);
 
+        // Iterate through the remaining nodes
         while(head != null){
             Node oldHead = head;
             head = head.getNextNode();
@@ -58,21 +60,26 @@ public class LinkedList {
 
             boolean stillInsterting = true;
 
+            // Find the correct position to insert the node
             while(stillInsterting){  
                 if(oldHead.getData() < pointerA.getData()){
+                    // Insert at the beginning
                     oldHead.setNextNode(pointerA);
                     sortedHead = oldHead;
                     stillInsterting = false;
                 }else if(pointerB == null || oldHead.getData() <= pointerB.getData()){
+                    // Insert between pointerA and pointerB
                     oldHead.setNextNode(pointerB);
                     pointerA.setNextNode(oldHead);
                     stillInsterting = false;
                 }else{
+                    // Move pointers forward
                     pointerA = pointerA.getNextNode();
                     pointerB = pointerB.getNextNode();
                 }
             }
         }
+        // Update head and tail references
         head = sortedHead;
         while(tail.getNextNode() != null)
             tail = tail.getNextNode();

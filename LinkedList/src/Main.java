@@ -8,10 +8,7 @@ public class Main {
 
         LinkedList secondLinkedList = new LinkedList(50);
         secondLinkedList.addNode(firstLinkedList.getHead());
-        secondLinkedList.addNode(60);
-        secondLinkedList.addNode(70);
-        secondLinkedList.addNode(43);
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < 100; i++)
             secondLinkedList.addNode((int)(Math.random() * 100));
 
         secondLinkedList.sortInsertion();
