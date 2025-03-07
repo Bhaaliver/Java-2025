@@ -1,3 +1,4 @@
+//sorting method is a modified is at the end of the file and is called sortInsertion
 public class LinkedList {
     private Node head;
     private Node tail;
@@ -51,7 +52,7 @@ public class LinkedList {
         while(head != null){
             Node oldHead = head;
             head = head.getNextNode();
-            
+
             Node pointerA = sortedHead;
             Node pointerB = pointerA.getNextNode();
 
