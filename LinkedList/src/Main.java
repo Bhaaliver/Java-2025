@@ -15,7 +15,6 @@ public class Main {
             secondLinkedList.addNode((int)(Math.random() * 100));
 
         secondLinkedList.sortInsertion();
-
         Node pointerA = secondLinkedList.getHead();
         
         while(pointerA != null){

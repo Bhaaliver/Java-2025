@@ -57,6 +57,7 @@ public class LinkedList {
             Node pointerB = pointerA.getNextNode();
 
             boolean stillInsterting = true;
+
             while(stillInsterting){  
                 if(oldHead.getData() < pointerA.getData()){
                     oldHead.setNextNode(pointerA);
@@ -73,5 +74,7 @@ public class LinkedList {
             }
         }
         head = sortedHead;
+        while(tail.getNextNode() != null)
+            tail = tail.getNextNode();
     }
 }
