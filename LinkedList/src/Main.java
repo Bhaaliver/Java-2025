@@ -11,7 +11,8 @@ public class Main {
         secondLinkedList.addNode(60);
         secondLinkedList.addNode(70);
         secondLinkedList.addNode(43);
-        secondLinkedList.addNode(8);
+        for(int i = 0; i < 10; i++)
+            secondLinkedList.addNode((int)(Math.random() * 100));
 
         secondLinkedList.sortInsertion();
 
