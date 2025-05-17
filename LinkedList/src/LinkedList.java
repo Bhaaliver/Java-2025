@@ -44,6 +44,16 @@ public class LinkedList {
         return tail;
     }
 
+    public int getLength(){
+        int length = 0;
+        Node pointer = head;
+        while(pointer != null){
+            length++;
+            pointer = pointer.getNextNode();
+        }
+        return length;
+    }
+
     public void sortInsertion(){
         // Initialize sortedHead with the first node of the list
         Node sortedHead = head;
