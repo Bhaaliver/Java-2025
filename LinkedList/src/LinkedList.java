@@ -3,6 +3,11 @@ public class LinkedList {
     private Node head;
     private Node tail;
 
+    LinkedList(){
+        this.head = null;
+        this.tail = null;
+    }
+
     LinkedList(Node head){
         this.head = head;
         this.tail = head;

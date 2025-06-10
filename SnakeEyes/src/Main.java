@@ -1,7 +1,7 @@
 class main{
     public static void main(String[] args){
-        int a = 1;
-        int b = 0;
+        int a = -1;
+        int b = -2;
         int iterations = 0;
         while(a != b){
             a = (int)(Math.random()*1000000);
