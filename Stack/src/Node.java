@@ -9,4 +9,16 @@ public class Node{
         this.value = value;
         this.nextNode = NextNode;
     }
+    public void setNext(Node newNext){
+        this.nextNode = newNext;
+    }
+    public Node getNext(){
+        return this.nextNode;
+    }
+    public int getValue(){
+        return this.value;
+    }
+    public void setValue(int newValue){
+        this.value = newValue;
+    }
 }
