@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 
 public class Main {
     public static void main(String[] args) throws NumberFormatException, IOException {
-       LinkedList list = new LinkedList(10);
+       LinkedList list = new LinkedList();
         try (FileReader fr = new FileReader("Extra/NumberInputs.txt")) {
             StringBuilder sb = new StringBuilder();
             int ch;

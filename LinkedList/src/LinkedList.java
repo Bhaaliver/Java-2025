@@ -20,6 +20,11 @@ public class LinkedList {
     }
 
     public void addNode(int data){
+        if (head == null) {
+            head = new Node(data);
+            tail = head;
+            return;
+        }
         Node newNode = new Node(data);
         tail.setNextNode(newNode);
         while (tail.getNextNode() != null)
@@ -27,6 +32,11 @@ public class LinkedList {
     }
 
     public  void addNode(Node newNode){
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+            return;
+        }
         tail.setNextNode(newNode);
         while(tail.getNextNode() != null)
             tail = tail.getNextNode();
