@@ -26,13 +26,13 @@ public class Main {
         System.out.println("Sorted Linked List:");
         Node current = list.getHead();
         while (current != null) {
-            System.out.print(current.getData() + " \n");
+            System.out.print(current.getData() + " ");
             current = current.getNextNode();
         }
         try (java.io.PrintWriter pw = new java.io.PrintWriter("Extra/output")) {
             current = list.getHead();
             while (current != null) {
-                pw.println(current.getData());
+                pw.print(current.getData() + " ");
                 current = current.getNextNode();
             }
             System.out.println("Output written to Extra/output");
