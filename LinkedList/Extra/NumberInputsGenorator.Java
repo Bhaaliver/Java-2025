@@ -12,7 +12,7 @@ public class GenerateNumbers {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10; i++) {
             sb.append(rand.nextInt(100000)); // Generates numbers between 0 and 9999
             sb.append(" ");
         }
